@@ -1,0 +1,21 @@
+Use Case: Search for borrowed book.
+Goal in Context: Buyer issues request directly to our company, expects goods shipped
+and to be billed.
+Scope: Company
+Level: Summary
+Preconditions: We know Buyer, their address, etc.
+Success End Condition: Buyer has goods, we have money for the goods.
+Failed End Condition: We have not sent the goods, Buyer has not spent the money.
+Primary Actor: Buyer, any agent (or computer) acting for the customer
+Trigger: purchase request comes in.
+MAIN SUCCESS SCENARIO:
+1. The use case begins when the system displays a form.
+2. The user enters a borrowed book ID
+3. The system displays a list of borrowed books
+4. While the user enters name,
+   a. the system displays a list of borrowed books for that client.
+   b. the user selects one borrowed book.
+   End loop
+5. If the system encounters an error, return to step 2.
+EXTENSIONS:
+2.1. User enters incorrect book ID: the system returns an error message
